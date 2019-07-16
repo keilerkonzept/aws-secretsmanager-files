@@ -30,9 +30,9 @@ func init() {
 	log.SetOutput(os.Stderr)
 	log.SetFlags(log.LstdFlags | log.Ldate)
 	log.SetPrefix("[aws-secretsmanager-files] ")
-	flag.Var(&config.SecretAssignments, "secret-file", "a key/value pair `FILE_PATH=SECRET_ARN` (may be specified repeatedly)")
-	flag.Var(&config.SecretJSONKeyStringAssignments, "secret-json-key-string-file", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
-	flag.Var(&config.SecretJSONKeyAssignments, "secret-json-key-file", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
+	flag.Var(&config.SecretAssignments, "secret", "a key/value pair `FILE_PATH=SECRET_ARN` (may be specified repeatedly)")
+	flag.Var(&config.SecretJSONKeyStringAssignments, "secret-json-key-string", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
+	flag.Var(&config.SecretJSONKeyAssignments, "secret-json-key", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
 	flag.UintVar(&config.FileMode, "file-mode", 0400, "file mode for secret files")
 	flag.Parse()
 

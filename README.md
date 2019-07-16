@@ -21,16 +21,16 @@ Or [download the binary](https://github.com/sgreben/aws-secretsmanager-files/rel
 
 ```bash
 # Linux
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.0.0/aws-secretsmanager-files_1.0.0_linux_x86_64.zip
-unzip aws-secretsmanager-files_1.0.0_linux_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.0/aws-secretsmanager-files_1.1.0_linux_x86_64.zip
+unzip aws-secretsmanager-files_1.1.0_linux_x86_64.zip
 
 # OS X
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.0.0/aws-secretsmanager-files_1.0.0_osx_x86_64.zip
-unzip aws-secretsmanager-files_1.0.0_osx_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.0/aws-secretsmanager-files_1.1.0_osx_x86_64.zip
+unzip aws-secretsmanager-files_1.1.0_osx_x86_64.zip
 
 # Windows
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.0.0/aws-secretsmanager-files_1.0.0_windows_x86_64.zip
-unzip aws-secretsmanager-files_1.0.0_windows_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.0/aws-secretsmanager-files_1.1.0_windows_x86_64.zip
+unzip aws-secretsmanager-files_1.1.0_windows_x86_64.zip
 ```
 
 ## Use it
@@ -42,11 +42,11 @@ aws-secretsmanager-files [OPTIONS]
 Usage of aws-secretsmanager-files:
   -file-mode uint
     	file mode for secret files (default 256)
-  -secret-file FILE_PATH=SECRET_ARN
+  -secret FILE_PATH=SECRET_ARN
     	a key/value pair FILE_PATH=SECRET_ARN (may be specified repeatedly)
-  -secret-json-key-file FILE_PATH=SECRET_ARN#JSON_KEY
+  -secret-json-key FILE_PATH=SECRET_ARN#JSON_KEY
     	a key/value pair FILE_PATH=SECRET_ARN#JSON_KEY (may be specified repeatedly)
-  -secret-json-key-string-file FILE_PATH=SECRET_ARN#JSON_KEY
+  -secret-json-key-string FILE_PATH=SECRET_ARN#JSON_KEY
     	a key/value pair FILE_PATH=SECRET_ARN#JSON_KEY (may be specified repeatedly)
 ```
 
