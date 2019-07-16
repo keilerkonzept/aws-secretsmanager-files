@@ -21,16 +21,16 @@ Or [download the binary](https://github.com/sgreben/aws-secretsmanager-files/rel
 
 ```bash
 # Linux
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.1/aws-secretsmanager-files_1.1.1_linux_x86_64.zip
-unzip aws-secretsmanager-files_1.1.1_linux_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_linux_x86_64.zip
+unzip aws-secretsmanager-files_1.1.2_linux_x86_64.zip
 
 # OS X
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.1/aws-secretsmanager-files_1.1.1_osx_x86_64.zip
-unzip aws-secretsmanager-files_1.1.1_osx_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_osx_x86_64.zip
+unzip aws-secretsmanager-files_1.1.2_osx_x86_64.zip
 
 # Windows
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.1/aws-secretsmanager-files_1.1.1_windows_x86_64.zip
-unzip aws-secretsmanager-files_1.1.1_windows_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_windows_x86_64.zip
+unzip aws-secretsmanager-files_1.1.2_windows_x86_64.zip
 ```
 
 ## Use it
@@ -53,15 +53,15 @@ Usage of aws-secretsmanager-files:
 ### Examples
 
 ```shell
-$ aws-secretsmanager-files -secret-file ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1
+$ aws-secretsmanager-files -secret ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1
 $ cat ./secret.json
 {"hello":"world"}
 
-$ aws-secretsmanager-files -secret-json-key-file ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
+$ aws-secretsmanager-files -secret-json-key ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
 $ cat ./secret.json
 "world"
 
-$ aws-secretsmanager-files secret-json-key-string-file ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
+$ aws-secretsmanager-files secret-json-key-string ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
 $ cat ./secret.json
 world
 ```

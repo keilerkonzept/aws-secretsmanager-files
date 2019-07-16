@@ -45,15 +45,15 @@ ${USAGE}
 ### Examples
 
 ```shell
-$ ${APP} -secret-file ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1
+$ ${APP} -secret ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1
 $ cat ./secret.json
 {"hello":"world"}
 
-$ ${APP} -secret-json-key-file ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
+$ ${APP} -secret-json-key ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
 $ cat ./secret.json
 "world"
 
-$ ${APP} secret-json-key-string-file ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
+$ ${APP} secret-json-key-string ./secret.json=arn:aws:secretsmanager:eu-west-1:28381901202:secret:example-secret-1#hello
 $ cat ./secret.json
 world
 ```
