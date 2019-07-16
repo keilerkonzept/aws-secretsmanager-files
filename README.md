@@ -1,5 +1,7 @@
 # aws-secretsmanager-files
 
+Writes AWS Secrets Manager secrets to files on disk.
+
 <!-- TOC -->
 
 - [Get it](#get-it)
@@ -21,12 +23,10 @@ Or [download the binary](https://github.com/sgreben/aws-secretsmanager-files/rel
 
 ```bash
 # Linux
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_linux_x86_64.zip
-unzip aws-secretsmanager-files_1.1.2_linux_x86_64.zip
+curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_osx_x86_64.zip
-unzip aws-secretsmanager-files_1.1.2_osx_x86_64.zip
+curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_osx_x86_64.tar.gz | tar xz
 
 # Windows
 curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.2/aws-secretsmanager-files_1.1.2_windows_x86_64.zip

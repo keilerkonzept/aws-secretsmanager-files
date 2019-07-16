@@ -1,5 +1,7 @@
 # ${APP}
 
+Writes AWS Secrets Manager secrets to files on disk.
+
 <!-- TOC -->
 
 - [Get it](#get-it)
@@ -21,12 +23,10 @@ Or [download the binary](https://github.com/sgreben/${APP}/releases/latest) from
 
 ```bash
 # Linux
-curl -LO https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_linux_x86_64.zip
-unzip ${APP}_${VERSION}_linux_x86_64.zip
+curl -L https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -LO https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_osx_x86_64.zip
-unzip ${APP}_${VERSION}_osx_x86_64.zip
+curl -L https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_osx_x86_64.tar.gz | tar xz
 
 # Windows
 curl -LO https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_windows_x86_64.zip
