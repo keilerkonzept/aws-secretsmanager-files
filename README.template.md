@@ -1,5 +1,7 @@
 # ${APP}
 
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/${APP}.svg)](https://hub.docker.com/r/sgreben/${APP}/tags)
+
 Writes AWS Secrets Manager secrets to files on disk.
 
 <!-- TOC -->
