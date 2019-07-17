@@ -1,5 +1,7 @@
 # aws-secretsmanager-files
 
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/aws-secretsmanager-files.svg)](https://hub.docker.com/r/sgreben/aws-secretsmanager-files/tags)
+
 Writes AWS Secrets Manager secrets to files on disk.
 
 <!-- TOC -->
