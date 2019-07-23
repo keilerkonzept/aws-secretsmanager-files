@@ -2,7 +2,7 @@
 
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/${APP}.svg)](https://hub.docker.com/r/sgreben/${APP}/tags)
 
-Writes AWS Secrets Manager secrets to files on disk.
+Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as environment variables instead, you can use [aws-secretsmanager-env](https://github.com/sgreben/aws-secretsmanager-env))
 
 <!-- TOC -->
 

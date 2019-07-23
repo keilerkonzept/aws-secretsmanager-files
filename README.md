@@ -2,7 +2,7 @@
 
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/aws-secretsmanager-files.svg)](https://hub.docker.com/r/sgreben/aws-secretsmanager-files/tags)
 
-Writes AWS Secrets Manager secrets to files on disk.
+Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as environment variables instead, you can use [aws-secretsmanager-env](https://github.com/sgreben/aws-secretsmanager-env))
 
 <!-- TOC -->
 
@@ -25,14 +25,14 @@ Or [download the binary](https://github.com/sgreben/aws-secretsmanager-files/rel
 
 ```bash
 # Linux
-curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.5/aws-secretsmanager-files_1.1.5_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.6/aws-secretsmanager-files_1.1.6_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.5/aws-secretsmanager-files_1.1.5_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.6/aws-secretsmanager-files_1.1.6_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.5/aws-secretsmanager-files_1.1.5_windows_x86_64.zip
-unzip aws-secretsmanager-files_1.1.5_windows_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.6/aws-secretsmanager-files_1.1.6_windows_x86_64.zip
+unzip aws-secretsmanager-files_1.1.6_windows_x86_64.zip
 ```
 
 ## Use it
