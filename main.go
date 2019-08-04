@@ -17,6 +17,7 @@ var config struct {
 	SecretJSONKeyStrings map[string]secretJSONKey
 	SecretJSONKeys       map[string]secretJSONKey
 	FileMode             uint
+	Profile              string
 }
 
 type secretJSONKey struct {
@@ -33,6 +34,7 @@ func init() {
 	flag.Var(&config.SecretAssignments, "secret", "a key/value pair `FILE_PATH=SECRET_ARN` (may be specified repeatedly)")
 	flag.Var(&config.SecretJSONKeyStringAssignments, "secret-json-key-string", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
 	flag.Var(&config.SecretJSONKeyAssignments, "secret-json-key", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
+	flag.StringVar(&config.Profile, "profile", "", "override the current AWS_PROFILE setting")
 	flag.UintVar(&config.FileMode, "file-mode", 0400, "file mode for secret files")
 	flag.Parse()
 

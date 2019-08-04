@@ -25,7 +25,9 @@ func awsSession() (*session.Session, error) {
 	creds := credentials.NewChainCredentials(
 		[]credentials.Provider{
 			&credentials.EnvProvider{},
-			&credentials.SharedCredentialsProvider{},
+			&credentials.SharedCredentialsProvider{
+				Profile: config.Profile,
+			},
 			&ec2rolecreds.EC2RoleProvider{Client: ec2Metadata},
 		},
 	)

@@ -25,14 +25,14 @@ Or [download the binary](https://github.com/sgreben/aws-secretsmanager-files/rel
 
 ```bash
 # Linux
-curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.6/aws-secretsmanager-files_1.1.6_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.2.0/aws-secretsmanager-files_1.2.0_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.6/aws-secretsmanager-files_1.1.6_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.2.0/aws-secretsmanager-files_1.2.0_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.1.6/aws-secretsmanager-files_1.1.6_windows_x86_64.zip
-unzip aws-secretsmanager-files_1.1.6_windows_x86_64.zip
+curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.2.0/aws-secretsmanager-files_1.2.0_windows_x86_64.zip
+unzip aws-secretsmanager-files_1.2.0_windows_x86_64.zip
 ```
 
 ## Use it
@@ -44,6 +44,8 @@ aws-secretsmanager-files [OPTIONS]
 Usage of aws-secretsmanager-files:
   -file-mode uint
     	file mode for secret files (default 256)
+  -profile string
+    	override the current AWS_PROFILE setting
   -secret FILE_PATH=SECRET_ARN
     	a key/value pair FILE_PATH=SECRET_ARN (may be specified repeatedly)
   -secret-json-key FILE_PATH=SECRET_ARN#JSON_KEY
