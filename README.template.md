@@ -2,7 +2,7 @@
 
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/${APP}.svg)](https://hub.docker.com/r/sgreben/${APP}/tags)
 
-Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as environment variables instead, you can use [aws-secretsmanager-env](https://github.com/sgreben/aws-secretsmanager-env))
+Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as environment variables instead, you can use [aws-secretsmanager-env](https://github.com/keilerkonzept/aws-secretsmanager-env))
 
 <!-- TOC -->
 
@@ -18,20 +18,20 @@ Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as env
 Using go get:
 
 ```bash
-go get -u github.com/sgreben/${APP}
+go get -u github.com/keilerkonzept/${APP}
 ```
 
-Or [download the binary](https://github.com/sgreben/${APP}/releases/latest) from the releases page.
+Or [download the binary](https://github.com/keilerkonzept/${APP}/releases/latest) from the releases page.
 
 ```bash
 # Linux
-curl -L https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/sgreben/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_windows_x86_64.zip
+curl -LO https://github.com/keilerkonzept/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_windows_x86_64.zip
 unzip ${APP}_${VERSION}_windows_x86_64.zip
 ```
 
