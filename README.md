@@ -2,7 +2,7 @@
 
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/aws-secretsmanager-files.svg)](https://hub.docker.com/r/sgreben/aws-secretsmanager-files/tags)
 
-Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as environment variables instead, you can use [aws-secretsmanager-env](https://github.com/sgreben/aws-secretsmanager-env))
+Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as environment variables instead, you can use [aws-secretsmanager-env](https://github.com/keilerkonzept/aws-secretsmanager-env))
 
 <!-- TOC -->
 
@@ -18,21 +18,21 @@ Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as env
 Using go get:
 
 ```bash
-go get -u github.com/sgreben/aws-secretsmanager-files
+go get -u github.com/keilerkonzept/aws-secretsmanager-files
 ```
 
-Or [download the binary](https://github.com/sgreben/aws-secretsmanager-files/releases/latest) from the releases page.
+Or [download the binary](https://github.com/keilerkonzept/aws-secretsmanager-files/releases/latest) from the releases page.
 
 ```bash
 # Linux
-curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.2.0/aws-secretsmanager-files_1.2.0_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.1/aws-secretsmanager-files_1.2.1_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.2.0/aws-secretsmanager-files_1.2.0_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.1/aws-secretsmanager-files_1.2.1_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/sgreben/aws-secretsmanager-files/releases/download/1.2.0/aws-secretsmanager-files_1.2.0_windows_x86_64.zip
-unzip aws-secretsmanager-files_1.2.0_windows_x86_64.zip
+curl -LO https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.1/aws-secretsmanager-files_1.2.1_windows_x86_64.zip
+unzip aws-secretsmanager-files_1.2.1_windows_x86_64.zip
 ```
 
 ## Use it
