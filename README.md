@@ -1,6 +1,6 @@
 # aws-secretsmanager-files
 
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/aws-secretsmanager-files.svg)](https://hub.docker.com/r/sgreben/aws-secretsmanager-files/tags)
+![Build](https://github.com/keilerkonzept/aws-secretsmanager-files/workflows/Build/badge.svg) [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sgreben/aws-secretsmanager-files.svg)](https://hub.docker.com/r/sgreben/aws-secretsmanager-files/tags)
 
 Writes AWS Secrets Manager secrets to files on disk. (If you need secrets as environment variables instead, you can use [aws-secretsmanager-env](https://github.com/keilerkonzept/aws-secretsmanager-env))
 
