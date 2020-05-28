@@ -13,7 +13,7 @@ clean:
 
 tag:
 	git tag "$(VERSION)"
-	git push "$(VERSION)"
+	git push origin "$(VERSION)"
 
 release: README.md zip
 	git add README.md
