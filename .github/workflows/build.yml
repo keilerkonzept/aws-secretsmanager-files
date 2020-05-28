@@ -22,14 +22,13 @@ jobs:
           mv subst /usr/local/bin
       - name: Install pre-requisites (3)
         run: |
-          curl -sSL https://github.com/github/hub/releases/download/v2.14.2/hub-linux-amd64-2.14.2.tgz | tar xz
-          mv hub-*/bin/hub /usr/local/bin
+          go get github.com/github/hub
       - name: Checkout
         uses: actions/checkout@master
       - run: git config user.name "GitHub Actions" && git config user.email "actions@users.noreply.github.com"
       - name: Build
         run: make binaries
       - name: Release
-        run: make release || true
+        run: make tag && make release || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
