@@ -11,8 +11,8 @@ clean:
 	rm -rf binaries/
 	rm -rf release/
 
-tag:
-	git tag "$(VERSION)"
+release-exists:
+	hub release show "$(VERSION)"
 
 release: README.md zip
 	git add package.json
