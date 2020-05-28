@@ -2,5 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "bumpVersion": "patch"
+  "bumpVersion": "patch",
+  "automerge": true,
+  "requiredStatusChecks": null
 }
