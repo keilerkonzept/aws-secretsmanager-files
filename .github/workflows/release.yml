@@ -1,0 +1,81 @@
+name: Release
+
+on:
+  push:
+    tags: [ '*' ]
+  
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    container: 
+      image: golang:1.13.11-alpine3.10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Install pre-requisites
+        run: apk add --no-cache make jq
+      - name: Build
+        run: make zip
+      - name: Release
+        uses: actions/create-release@v1
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+      - name: Attach aws-secretsmanager-files_${{ github.ref }}_osx_x86_64.tar.gz
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/aws-secretsmanager-files_${{ github.ref }}_osx_x86_64.tar.gz
+          asset_name: aws-secretsmanager-files_${{ github.ref }}_osx_x86_64.tar.gz
+          asset_content_type: application/gzip
+
+      - name: Attach aws-secretsmanager-files_${{ github.ref }}_windows_x86_64.zip
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/aws-secretsmanager-files_${{ github.ref }}_windows_x86_64.zip
+          asset_name: aws-secretsmanager-files_${{ github.ref }}_windows_x86_64.zip
+          asset_content_type: application/zip
+
+      - name: Attach aws-secretsmanager-files_${{ github.ref }}_linux_x86_64.tar.gz
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/aws-secretsmanager-files_${{ github.ref }}_linux_x86_64.tar.gz
+          asset_name: aws-secretsmanager-files_${{ github.ref }}_linux_x86_64.tar.gz
+          asset_content_type: application/gzip
+
+      - name: Attach aws-secretsmanager-files_${{ github.ref }}_osx_x86_32.tar.gz
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/aws-secretsmanager-files_${{ github.ref }}_osx_x86_32.tar.gz
+          asset_name: aws-secretsmanager-files_${{ github.ref }}_osx_x86_32.tar.gz
+          asset_content_type: application/gzip
+
+      - name: Attach aws-secretsmanager-files_${{ github.ref }}_windows_x86_32.zip
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/aws-secretsmanager-files_${{ github.ref }}_windows_x86_32.zip
+          asset_name: aws-secretsmanager-files_${{ github.ref }}_windows_x86_32.zip
+          asset_content_type: application/zip
+
+      - name: Attach aws-secretsmanager-files_${{ github.ref }}_linux_x86_32.tar.gz
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/aws-secretsmanager-files_${{ github.ref }}_linux_x86_32.tar.gz
+          asset_name: aws-secretsmanager-files_${{ github.ref }}_linux_x86_32.tar.gz
+          asset_content_type: application/gzip
+
+      - name: Attach aws-secretsmanager-files_${{ github.ref }}_linux_arm64.tar.gz
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/aws-secretsmanager-files_${{ github.ref }}_linux_arm64.tar.gz
+          asset_name: aws-secretsmanager-files_${{ github.ref }}_linux_arm64.tar.gz
+          asset_content_type: application/gzip
