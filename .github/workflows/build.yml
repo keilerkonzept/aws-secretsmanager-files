@@ -29,6 +29,6 @@ jobs:
       - name: Build
         run: make binaries
       - name: Release
-        run: make tag && make release || true
+        run: if make tag; then make release; fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
