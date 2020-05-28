@@ -12,10 +12,10 @@ jobs:
     container: 
       image: golang:1.13.11-alpine3.10
     steps:
+      - name: Install pre-requisites
+        run: apk add --no-cache make jq git
       - name: Checkout
         uses: actions/checkout@master
-      - name: Install pre-requisites
-        run: apk add --no-cache make jq
       - name: Build
         run: make binaries
       - name: Tag
