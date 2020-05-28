@@ -25,14 +25,14 @@ Or [download the binary](https://github.com/keilerkonzept/aws-secretsmanager-fil
 
 ```bash
 # Linux
-curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.1/aws-secretsmanager-files_1.2.1_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.2/aws-secretsmanager-files_1.2.2_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.1/aws-secretsmanager-files_1.2.1_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.2/aws-secretsmanager-files_1.2.2_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.1/aws-secretsmanager-files_1.2.1_windows_x86_64.zip
-unzip aws-secretsmanager-files_1.2.1_windows_x86_64.zip
+curl -LO https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.2/aws-secretsmanager-files_1.2.2_windows_x86_64.zip
+unzip aws-secretsmanager-files_1.2.2_windows_x86_64.zip
 ```
 
 ## Use it
@@ -52,6 +52,8 @@ Usage of aws-secretsmanager-files:
     	a key/value pair FILE_PATH=SECRET_ARN#JSON_KEY (may be specified repeatedly)
   -secret-json-key-string FILE_PATH=SECRET_ARN#JSON_KEY
     	a key/value pair FILE_PATH=SECRET_ARN#JSON_KEY (may be specified repeatedly)
+  -version
+    	print version and exit
 ```
 
 ### Examples

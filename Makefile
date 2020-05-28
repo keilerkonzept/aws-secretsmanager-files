@@ -1,4 +1,4 @@
-VERSION = 1.2.1
+VERSION = 1.2.2
 
 APP      := aws-secretsmanager-files
 PACKAGES := $(shell go list -f {{.Dir}} ./...)
