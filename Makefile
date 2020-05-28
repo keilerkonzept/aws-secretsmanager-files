@@ -16,6 +16,7 @@ tag:
 	git push origin "$(VERSION)"
 
 release: README.md zip
+	git add package.json
 	git add README.md
 	git add Makefile
 	git commit -am "Release $(VERSION)" || true
