@@ -29,6 +29,7 @@ jobs:
       - name: Build
         run: make binaries
       - name: Release
+        if: ${{ github.event_name != 'pull_request' }}
         run: if ! make release-exists; then make release; fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
