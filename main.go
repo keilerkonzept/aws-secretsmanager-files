@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -18,7 +19,13 @@ var config struct {
 	SecretJSONKeys       map[string]secretJSONKey
 	FileMode             uint
 	Profile              string
+	PrintVersionAndExit  bool
 }
+
+var (
+	app     = "aws-secretsmanager-files"
+	version = "SNAPSHOT"
+)
 
 type secretJSONKey struct {
 	SecretID string
@@ -30,13 +37,20 @@ func init() {
 	config.SecretJSONKeys = make(map[string]secretJSONKey)
 	log.SetOutput(os.Stderr)
 	log.SetFlags(log.LstdFlags | log.Ldate)
-	log.SetPrefix("[aws-secretsmanager-files] ")
+	log.SetPrefix(fmt.Sprintf("[%s] ", app))
 	flag.Var(&config.SecretAssignments, "secret", "a key/value pair `FILE_PATH=SECRET_ARN` (may be specified repeatedly)")
 	flag.Var(&config.SecretJSONKeyStringAssignments, "secret-json-key-string", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
 	flag.Var(&config.SecretJSONKeyAssignments, "secret-json-key", "a key/value pair `FILE_PATH=SECRET_ARN#JSON_KEY` (may be specified repeatedly)")
 	flag.StringVar(&config.Profile, "profile", "", "override the current AWS_PROFILE setting")
 	flag.UintVar(&config.FileMode, "file-mode", 0400, "file mode for secret files")
+	flag.BoolVar(&config.PrintVersionAndExit, "version", false, "print version and exit")
 	flag.Parse()
+
+	if config.PrintVersionAndExit {
+		fmt.Printf("%s %s", app, version)
+		fmt.Println()
+		os.Exit(0)
+	}
 
 	for key, value := range config.SecretJSONKeyStringAssignments.Values {
 		i := strings.IndexRune(value, '#')
