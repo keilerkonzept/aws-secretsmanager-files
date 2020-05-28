@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Install pre-requisites (1)
         run: |
-          apk add --no-cache make jq zip curl git
+          apk add --no-cache make jq zip curl git npm
       - name: Install pre-requisites (2)
         run: |
           curl -sSLO https://github.com/sgreben/subst/releases/download/1.1.1/subst_1.1.1_linux_x86_64.zip
@@ -30,6 +30,8 @@ jobs:
         run: make binaries
       - name: Release
         if: ${{ github.event_name != 'pull_request' }}
-        run: if ! make release-exists; then make release; fi
+        run: |
+          npm version patch
+          make release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
