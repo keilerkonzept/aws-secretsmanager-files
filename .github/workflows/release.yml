@@ -26,7 +26,7 @@ jobs:
         with:
           tag_name: ${{ env.GITHUB_REF_SLUG }}
           release_name: Release ${{ env.GITHUB_REF_SLUG }}
-      - name: Attach aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_osx_x86_64.tar.gz
+      - name: Attach aws-secretsmanager-files_..._osx_x86_64.tar.gz
         uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -34,7 +34,7 @@ jobs:
           asset_name: aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_osx_x86_64.tar.gz
           asset_content_type: application/gzip
 
-      - name: Attach aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_windows_x86_64.zip
+      - name: Attach aws-secretsmanager-files_..._windows_x86_64.zip
         uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -42,7 +42,7 @@ jobs:
           asset_name: aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_windows_x86_64.zip
           asset_content_type: application/zip
 
-      - name: Attach aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_linux_x86_64.tar.gz
+      - name: Attach aws-secretsmanager-files_..._linux_x86_64.tar.gz
         uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -50,7 +50,7 @@ jobs:
           asset_name: aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_linux_x86_64.tar.gz
           asset_content_type: application/gzip
 
-      - name: Attach aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_osx_x86_32.tar.gz
+      - name: Attach aws-secretsmanager-files_..._osx_x86_32.tar.gz
         uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -58,7 +58,7 @@ jobs:
           asset_name: aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_osx_x86_32.tar.gz
           asset_content_type: application/gzip
 
-      - name: Attach aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_windows_x86_32.zip
+      - name: Attach aws-secretsmanager-files_..._windows_x86_32.zip
         uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -66,7 +66,7 @@ jobs:
           asset_name: aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_windows_x86_32.zip
           asset_content_type: application/zip
 
-      - name: Attach aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_linux_x86_32.tar.gz
+      - name: Attach aws-secretsmanager-files_..._linux_x86_32.tar.gz
         uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -74,7 +74,7 @@ jobs:
           asset_name: aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_linux_x86_32.tar.gz
           asset_content_type: application/gzip
 
-      - name: Attach aws-secretsmanager-files_${{ env.GITHUB_REF_SLUG }}_linux_arm64.tar.gz
+      - name: Attach aws-secretsmanager-files_..._linux_arm64.tar.gz
         uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
