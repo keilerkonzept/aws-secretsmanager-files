@@ -9,8 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: 
+      image: golang:1.13.11-alpine3.10
     steps:
-      - uses: docker://golang:1.13.11-alpine3.10
       - name: Install pre-requisites
         run: apk add --no-cache make jq
       - name: Build
