@@ -11,6 +11,10 @@ clean:
 	rm -rf binaries/
 	rm -rf release/
 
+tag:
+	git tag "$(VERSION)"
+	git push "$(VERSION)"
+
 release: README.md zip
 	git add README.md
 	git add Makefile
