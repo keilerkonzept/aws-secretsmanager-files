@@ -1,4 +1,4 @@
-FROM golang:1.12.7-alpine3.10 AS build
+FROM golang:1.13.11-alpine3.10 AS build
 RUN apk add --no-cache make
 WORKDIR /go/src/github.com/keilerkonzept/aws-secretsmanager-files/
 COPY . .
