@@ -1,4 +1,4 @@
-# github.com/aws/aws-sdk-go v1.34.8
+# github.com/aws/aws-sdk-go v1.34.9
 ## explicit
 github.com/aws/aws-sdk-go/aws
 github.com/aws/aws-sdk-go/aws/awserr
