@@ -1,4 +1,4 @@
-# github.com/aws/aws-sdk-go v1.34.27
+# github.com/aws/aws-sdk-go v1.34.28
 ## explicit
 github.com/aws/aws-sdk-go/aws
 github.com/aws/aws-sdk-go/aws/awserr
@@ -37,7 +37,7 @@ github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil
 github.com/aws/aws-sdk-go/service/secretsmanager
 github.com/aws/aws-sdk-go/service/sts
 github.com/aws/aws-sdk-go/service/sts/stsiface
-# github.com/jmespath/go-jmespath v0.3.0
+# github.com/jmespath/go-jmespath v0.4.0
 github.com/jmespath/go-jmespath
 # golang.org/x/net v0.0.0-20200520182314-0ba52f642ac2
 ## explicit
