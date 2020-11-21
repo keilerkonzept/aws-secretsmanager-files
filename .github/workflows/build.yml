@@ -31,6 +31,9 @@ jobs:
       - name: Release
         if: ${{ github.event_name != 'pull_request' }}
         run: |
+          go mod tidy
+          git add go.sum
+          git commit -m "go mod tidy"
           npm version patch
           make release
         env:
