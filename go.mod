@@ -2,4 +2,4 @@ module github.com/keilerkonzept/aws-secretsmanager-files
 
 go 1.14
 
-require github.com/aws/aws-sdk-go v1.40.31
+require github.com/aws/aws-sdk-go v1.40.32
