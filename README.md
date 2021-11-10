@@ -25,14 +25,14 @@ Or [download the binary](https://github.com/keilerkonzept/aws-secretsmanager-fil
 
 ```bash
 # Linux
-curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.320/aws-secretsmanager-files_1.2.320_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.321/aws-secretsmanager-files_1.2.321_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.320/aws-secretsmanager-files_1.2.320_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.321/aws-secretsmanager-files_1.2.321_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.320/aws-secretsmanager-files_1.2.320_windows_x86_64.zip
-unzip aws-secretsmanager-files_1.2.320_windows_x86_64.zip
+curl -LO https://github.com/keilerkonzept/aws-secretsmanager-files/releases/download/1.2.321/aws-secretsmanager-files_1.2.321_windows_x86_64.zip
+unzip aws-secretsmanager-files_1.2.321_windows_x86_64.zip
 ```
 
 ## Use it
